@@ -7,7 +7,8 @@ RUN apt-get install -y ruby-thrift
 RUN apt -y install git
 WORKDIR /home/
 RUN git clone https://github.com/LuisOlivo340/CalculadoraBasicaThrift.git
-WORKDIR /home/CalculadoraThrift/Cliente/
+#CalculadoraBasicaThrift/Cliente/
+WORKDIR /home/CalculadoraBasicaThrift/Cliente/
 RUN thrift -r -gen rb ThriftCalc.thrift  
 
 EXPOSE 7130

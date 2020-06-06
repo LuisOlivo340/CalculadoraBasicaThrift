@@ -9,4 +9,5 @@ docker-compose create
 una vez iniciado iniciar el cliente y el servidor
 
 docker start Servidor
+
 docker start -i Cliente

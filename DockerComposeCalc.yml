@@ -1,0 +1,22 @@
+version: '2.2'
+
+services:
+    servidor:
+        build:
+            context: ./Servidor
+            dockerfile: Dockerfile
+        container_name: servidorCT
+        network_mode: host
+        ports:
+            - "7130:7130"
+    
+    cliente:
+        build:
+            context: ./Cliente
+            dockerfile: Dockerfile
+        container_name: clienteCT
+        network_mode: host
+        ports:
+            - "7130:7130"
+        stdin_open: true
+        tty: true
